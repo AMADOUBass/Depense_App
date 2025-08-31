@@ -1,0 +1,81 @@
+POST http://localhost:8000/api/token/
+Content-Type: application/json
+
+{
+    "username": "JohnDoe",
+    "password": "password123"
+}
+
+###
+POST http://localhost:8000/api/transactions/
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzU2NjY0MjcwLCJpYXQiOjE3NTY2NjA2NzAsImp0aSI6IjFjNTJlYjRjMGZiNzQzMWVhYTZiYzhiMmUxMzEyMWY1IiwidXNlcl9pZCI6IjMifQ.XQ9Zu6R61YbFaSZ9W1YTkZto8xs7Xy8-bpVKuPkne7c
+
+{
+    "amount": 1000.00,
+    "description": "Test transaction"
+}
+
+###
+
+GET http://localhost:8000/api/transactions/
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzU2NjY0NjU2LCJpYXQiOjE3NTY2NjEwNTYsImp0aSI6ImY5OGZjMzY5NWQ3NDQ4ZGY5YzJiYjM5ODRkMzJiYjk0IiwidXNlcl9pZCI6IjMifQ.nu16dVzwBc4UFb61p-o3-g9OdPFEEszu84D8Ps6z_5Q
+
+###
+
+
+
+PUT http://localhost:8000/api/transactions/c3de1a0c-1142-4614-b63c-1350e1d13088/
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzU2NjEzMTI5LCJpYXQiOjE3NTY2MTI4MjksImp0aSI6IjIyNGE4MGVlODUyZjQ2MWNiMTkxYmMyNWIwNmE3ZDQ3IiwidXNlcl9pZCI6IjIifQ.NBbc6y4bAbTc9BRGKBSzAtx7VWJOC3E-onFr65LTGTc
+
+{
+    "amount": 150.00,
+    "description": "Updated transaction"
+}
+
+###
+
+
+PATCH http://localhost:8000/api/transactions/c3de1a0c-1142-4614-b63c-1350e1d13088/
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzU2NjEzMTI5LCJpYXQiOjE3NTY2MTI4MjksImp0aSI6IjIyNGE4MGVlODUyZjQ2MWNiMTkxYmMyNWIwNmE3ZDQ3IiwidXNlcl9pZCI6IjIifQ.NBbc6y4bAbTc9BRGKBSzAtx7VWJOC3E-onFr65LTGTc
+
+{
+    "amount": 10.00,
+    "description": "Updated transaction"
+}
+
+###
+
+DELETE http://localhost:8000/api/transactions/d757bbef-a3e5-417e-8926-01a417f46b0f/
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzU2NjY0NjU2LCJpYXQiOjE3NTY2NjEwNTYsImp0aSI6ImY5OGZjMzY5NWQ3NDQ4ZGY5YzJiYjM5ODRkMzJiYjk0IiwidXNlcl9pZCI6IjMifQ.nu16dVzwBc4UFb61p-o3-g9OdPFEEszu84D8Ps6z_5Q
+
+
+
+###
+
+POST http://localhost:8000/api/transactions/
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzU2NjEzMTI5LCJpYXQiOjE3NTY2MTI4MjksImp0aSI6IjIyNGE4MGVlODUyZjQ2MWNiMTkxYmMyNWIwNmE3ZDQ3IiwidXNlcl9pZCI6IjIifQ.NBbc6y4bAbTc9BRGKBSzAtx7VWJOC3E-onFr65LTGTc
+
+{
+    "amount": 100.00,
+    "description": "Test transaction"
+}
+
+###
+
+GET http://localhost:8000/api/transactions/
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzU2NjEzMTI5LCJpYXQiOjE3NTY2MTI4MjksImp0aSI6IjIyNGE4MGVlODUyZjQ2MWNiMTkxYmMyNWIwNmE3ZDQ3IiwidXNlcl9pZCI6IjIifQ.NBbc6y4bAbTc9BRGKBSzAtx7VWJOC3E-onFr65LTGTc
+
+###
+
+POST  http://localhost:8000/api/register/
+Content-Type: application/json
+
+{
+    "username": "JohnDoe",
+    "email": "john@example.com",
+    "password": "password123"
+}
